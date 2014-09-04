@@ -1,0 +1,29 @@
+Blogging in reStructured Text
+=============================
+
+:date: 2014-09-04 18:22:57
+:tags: publishing, rst, blogging
+:category: web
+
+I have always been quite a big fan of `reStructured Text`_ Text as markup
+format. It's easy to write and supports a lot of different text roles. It's not
+a lot more difficult than Markdown_ but can do a lot more. I always thought it
+was a great blogging "platform". So I went searching, and found Pelican_ as
+static site generator. I have been playing around with it now for two days and
+am impressed so far!
+
+To me the two biggest highlights are:
+
+* Publishing from the shell and
+* Tracking articles `via git`_
+
+As ``git`` is a very viable option, publishing via hooks becomes a very nead
+possibility as well. For now, I'm handling it with fabric_, and I don't see the
+immediate need to publish via hooks.
+
+
+.. _markdown: http://daringfireball.net/projects/markdown/
+.. _pelican: http://docs.getpelican.com
+.. _restructured text: http://docutils.sourceforge.net/rst.html
+.. _via git: https://github.com/exhuma/blog
+.. _fabric: http://fabfile.org
