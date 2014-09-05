@@ -23,7 +23,7 @@ LINKS = (
     ('foobar.lu', 'http://foobar.lu/'),
 )
 
-THEME = '/home/exhuma/work/__libs__/my-pelican-themes/michel.albert.lu'
+THEME = 'theme'
 #THEME = '/home/exhuma/work/__libs__/pelican-themes/chunk'
 #THEME = '/home/exhuma/work/__libs__/pelican-themes/notmyidea-cms'
 #THEME = '/home/exhuma/work/__libs__/pelican-themes/pelican-mockingbird'
