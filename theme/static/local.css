@@ -4,19 +4,37 @@
   position: relative;
   padding: 16px 0;
   background-color:#EEE;
+  background: url('/theme/images/blackwidow.jpg');
+  background-size: 100%;
 }
 
 .navbar .nav > li > a { color: #FF0F00; }
 .navbar .divider-vertical { border-right: 1px solid #4D4D4D; }
 .navbar { margin-bottom: 4em; background-color: rgba(0,0,0,0)} 
 
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover {
-    color: #0A5693;
-    background-color:#bbb; 
-/*    background-color:#E9EFF6; Initial colour to match bottom */
+.nav-pills > li > a {
+    border: 1px solid hsla(245, 68%, 77%, 0.1);
 }
 
+.nav-pills > li > a:hover {
+    background-color: hsla(245, 68%, 77%, 0.1);
+    border: 1px solid hsla(245, 68%, 77%, 0.3);
+}
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover {
+    text-decoration: none;
+}
+
+.nav-pills > .active > a {
+    background-color: hsla(245, 68%, 77%, 0.2);
+}
+
+.nav-pills > li > a {
+    border-radius: 2px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
 
 #blog-nav{
     padding: 5px 0;
@@ -96,7 +114,21 @@ TABLE {
 }
 
 
-.brand { font-family: 'Alegreya SC', 'Garamond', 'Georgia'; font-weight: normal; font-size: 42px; line-height:40px; margin-top: 10px; display: block; color:#000001; }
+.brand {
+    font-family: 'Alegreya SC', 'Garamond', 'Georgia';
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 40px;
+    margin-top: 10px;
+    display: block;
+    color: hsla(245, 68%, 77%, 0.1);
+    text-shadow: 0px 0px .5px hsla(245, 68%, 88%, 0.9);
+}
+
+.brand:hover {
+    text-decoration: none;
+    color: hsla(245, 68%, 88%, 0.6);
+}
 
 /* Styling for articles */
 .article { padding-bottom:15px; padding-right: 40px; }
