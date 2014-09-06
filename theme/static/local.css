@@ -3,8 +3,7 @@
 .blog-header {
   position: relative;
   padding: 16px 0;
-  background-color:#EEE;
-  background: url('/theme/images/blackwidow.jpg');
+  background: #000 url('/theme/images/blackwidow.jpg') no-repeat;
   background-size: 100%;
 }
 
@@ -128,6 +127,13 @@ TABLE {
 .brand:hover {
     text-decoration: none;
     color: hsla(245, 68%, 88%, 0.6);
+}
+
+#avatar {
+    float: left;
+    margin-right: 1em;
+    border-radius: 50%;
+    box-shadow: 3px 3px 4px hsla(0, 0%, 0%, 0.5);
 }
 
 /* Styling for articles */

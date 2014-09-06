@@ -61,3 +61,5 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+GRAVATAR = "70888c4c7063a4f8be70a01125e7cb74"
