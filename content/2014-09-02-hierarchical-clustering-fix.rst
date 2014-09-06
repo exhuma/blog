@@ -44,7 +44,7 @@ uclus-linkage later on. As overall method, we will use a bottom-up approach.
 Initial Step
 ------------
 
-.. figure:: images/01-initial.png
+.. figure:: {filename}images/01-initial.png
     :alt: Graph of initial data
 
 So we have the following points::
@@ -87,7 +87,7 @@ Single Linkage
 First Step
 ~~~~~~~~~~
 
-.. figure:: images/eb.png
+.. figure:: {filename}images/eb.png
     :alt: Graph showing the fist clustering step
 
 With this matrix, we see that the first candidates are ``[b, e]`` and ``[c,
@@ -115,7 +115,7 @@ d]``. We'll pick ``[b, e]`` as firt cluster (``A``)::
 Second Step
 ~~~~~~~~~~~
 
-.. figure:: images/cd-eb.png
+.. figure:: {filename}images/cd-eb.png
     :alt: Graph showing the second clustering step.
 
 The next candidate is ``[c, d]`` as ``B``::
@@ -141,7 +141,7 @@ Giving us:
 Third Step
 ~~~~~~~~~~
 
-.. figure:: images/cdf-eb.png
+.. figure:: {filename}images/cdf-eb.png
     :alt: Graph showing the third clustering step.
 
 Then ``[f, B]`` as ``C``::
@@ -165,7 +165,7 @@ Resulting in:
 Fourth Step
 ~~~~~~~~~~~
 
-.. figure:: images/acdf-eb-1.png
+.. figure:: {filename}images/acdf-eb-1.png
     :alt: Graph showing the fourth clustering step.
 
 Then ``[a, C]`` as ``D``::
@@ -231,7 +231,7 @@ First iteration is identical, but distance matrix has different values. The
 subsequent steps will be displayed without aditional explanation, the idea is
 the same as above, simply using a different linkage function.
 
-.. figure:: images/eb.png
+.. figure:: {filename}images/eb.png
     :alt: Graph showing the first clustering step.
 
 .. csv-table:: Distance Matrix
@@ -249,7 +249,7 @@ the same as above, simply using a different linkage function.
 Second Step
 ~~~~~~~~~~~
 
-.. figure:: images/cd-eb.png
+.. figure:: {filename}images/cd-eb.png
     :alt: Graph showing the second clustering step.
 
 .. csv-table:: Distance Matrix
@@ -275,7 +275,7 @@ Third Step
     For a demonstration, we'll pick ``[Ba]`` as to have a different result from
     sinle linkage...
 
-.. figure:: images/acd-eb.png
+.. figure:: {filename}images/acd-eb.png
     :alt: Graph showing the third clustering step.
 
 This will give us:
@@ -292,7 +292,7 @@ This will give us:
 Fourth Step
 ~~~~~~~~~~~
 
-.. figure:: images/acdf-eb-2.png
+.. figure:: {filename}images/acdf-eb-2.png
     :alt: Graph showing the fourth clustering step.
 
 And finally
