@@ -41,6 +41,13 @@ distance. And, for the first step through, we will use single linkage between
 clusters. The same scenario will be played through with complete- and
 uclus-linkage later on. As overall method, we will use a bottom-up approach.
 
+The three aproaches will result in the following dendograms:
+
+
+.. figure:: {filename}images/dendograms.png
+    :alt: Final Dendograms
+
+
 Initial Step
 ------------
 
