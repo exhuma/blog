@@ -46,6 +46,7 @@ def reserve():
     serve()
 
 def preview():
+    local('git push')
     local('./env/bin/pelican -s publishconf.py')
 
 @hosts(production)
