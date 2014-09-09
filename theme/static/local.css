@@ -1,5 +1,16 @@
 /* Styling for Nav bar. Bg color, link color etc */
 
+.figure {
+    border: 1px solid #ccc;
+    padding: 0.5em 1em;
+    box-shadow: 3px 3px 4px hsla(0, 0%, 0%, 0.5);
+}
+
+.figure.align-left {
+    float: left;
+    margin-right: 1em;
+}
+
 .blog-header {
   position: relative;
   padding: 16px 0;
