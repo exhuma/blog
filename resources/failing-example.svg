@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200">
+    <path style="stroke:#000000;fill:none;"
+        d="M 0 0 L 1200 0 L 1200 1200 L 0 1200 Z" />
+    <g id="everything" transform="translate(100, 1100)">
+
+        <g id="graph" stroke="#000000" fill="none" stroke-width="1">
+            <path d="M -10 0 L 1020 0" />
+            <path d="M    0 -5 L    0 5" />
+            <path d="M   50 -5 L   50 5" />
+            <path d="M  100 -5 L  100 5" />
+            <path d="M  150 -5 L  150 5" />
+            <path d="M  200 -5 L  200 5" />
+            <path d="M  250 -5 L  250 5" />
+            <path d="M  300 -5 L  300 5" />
+            <path d="M  350 -5 L  350 5" />
+            <path d="M  400 -5 L  400 5" />
+            <path d="M  450 -5 L  450 5" />
+            <path d="M  500 -5 L  500 5" />
+            <path d="M  550 -5 L  550 5" />
+            <path d="M  600 -5 L  600 5" />
+            <path d="M  650 -5 L  650 5" />
+            <path d="M  700 -5 L  700 5" />
+            <path d="M  750 -5 L  750 5" />
+            <path d="M  800 -5 L  800 5" />
+            <path d="M  850 -5 L  850 5" />
+            <path d="M  900 -5 L  900 5" />
+            <path d="M  950 -5 L  950 5" />
+            <path d="M 1000 -5 L 1000 5" />
+        </g>
+
+        <g id="step-0" transform="translate(0 -10)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="124" />
+            <circle r="2" cy="0" cx="131" />
+            <circle r="2" cy="0" cx="134" />
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" />
+            <circle r="2" cy="0" cx="365" />
+            <circle r="2" cy="0" cx="391" />
+            <circle r="2" cy="0" cx="398" />
+            <circle r="2" cy="0" cx="518" />
+            <circle r="2" cy="0" cx="542" />
+            <circle r="2" cy="0" cx="564" />
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="940" />
+            <circle r="2" cy="0" cx="956" />
+            <circle r="2" cy="0" cx="971" />
+        </g>
+
+        <g id="step-1" fill="#cccccc" transform="translate(0 -12)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="124" />
+            <circle r="2" cy="0" cx="131" />
+            <circle r="2" cy="0" cx="134" />
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" fill="red"/> <!-- (365, 365) -->
+            <circle r="2" cy="0" cx="391" />
+            <circle r="2" cy="0" cx="398" />
+            <circle r="2" cy="0" cx="518" />
+            <circle r="2" cy="0" cx="542" />
+            <circle r="2" cy="0" cx="564" />
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="940" />
+            <circle r="2" cy="0" cx="956" />
+            <circle r="2" cy="0" cx="971" />
+        </g>
+
+        <g id="step-2" fill="#cccccc" transform="translate(0 -15)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="124" />
+            <circle r="2" cy="0" cx="132" fill="red"/> <!-- (131, 134) -->
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" /> <!-- (365, 365) -->
+            <circle r="2" cy="0" cx="391" />
+            <circle r="2" cy="0" cx="398" />
+            <circle r="2" cy="0" cx="518" />
+            <circle r="2" cy="0" cx="542" />
+            <circle r="2" cy="0" cx="564" />
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="940" />
+            <circle r="2" cy="0" cx="956" />
+            <circle r="2" cy="0" cx="971" />
+        </g>
+
+        <g id="step-3" fill="#cccccc" transform="translate(0 -22)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" fill="red"/> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" /> <!-- (365, 365) -->
+            <circle r="2" cy="0" cx="391" />
+            <circle r="2" cy="0" cx="398" />
+            <circle r="2" cy="0" cx="518" />
+            <circle r="2" cy="0" cx="542" />
+            <circle r="2" cy="0" cx="564" />
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="940" />
+            <circle r="2" cy="0" cx="956" />
+            <circle r="2" cy="0" cx="971" />
+        </g>
+
+        <g id="step-4" fill="#cccccc" transform="translate(0 -29)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" /> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" /> <!-- (365, 365) -->
+            <circle r="2" cy="0" cx="394" fill="red"/> <!-- (391, 398) -->
+            <circle r="2" cy="0" cx="518" />
+            <circle r="2" cy="0" cx="542" />
+            <circle r="2" cy="0" cx="564" />
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="940" />
+            <circle r="2" cy="0" cx="956" />
+            <circle r="2" cy="0" cx="971" />
+        </g>
+
+        <g id="step-5" fill="#cccccc" transform="translate(0 -44)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" /> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" /> <!-- (365, 365) -->
+            <circle r="2" cy="0" cx="394" /> <!-- (391, 398) -->
+            <circle r="2" cy="0" cx="518" />
+            <circle r="2" cy="0" cx="542" />
+            <circle r="2" cy="0" cx="564" />
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="940" />
+            <circle r="2" cy="0" cx="963" fill="red"/> <!-- (956, 971) -->
+        </g>
+
+        <g id="step-6" fill="#cccccc" transform="translate(0 -60)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" /> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" /> <!-- (365, 365) -->
+            <circle r="2" cy="0" cx="394" /> <!-- (391, 398) -->
+            <circle r="2" cy="0" cx="518" />
+            <circle r="2" cy="0" cx="542" />
+            <circle r="2" cy="0" cx="564" />
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="951" fill="red"/> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-7" fill="#cccccc" transform="translate(0 -82)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" /> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" /> <!-- (365, 365) -->
+            <circle r="2" cy="0" cx="394" /> <!-- (391, 398) -->
+            <circle r="2" cy="0" cx="518" />
+            <circle r="2" cy="0" cx="553" fill="red"/> <!-- (542, 564) -->
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-8" fill="#cccccc" transform="translate(0 -106)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" /> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="365" /> <!-- (365, 365) -->
+            <circle r="2" cy="0" cx="394" /> <!-- (391, 398) -->
+            <circle r="2" cy="0" cx="541" fill="red"/> <!-- (518, (542, 564)) -->
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-9" fill="#cccccc" transform="translate(0 -132)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" /> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="336" />
+            <circle r="2" cy="0" cx="379" fill="red"/> <!-- ((365, 365), (391, 398)) -->
+            <circle r="2" cy="0" cx="541" /> <!-- (518, (542, 564)) -->
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-10" fill="#cccccc" transform="translate(0 -161)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" /> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="371" fill="red"/> <!-- (336, (365, 365), (391, 398)) -->
+            <circle r="2" cy="0" cx="541" /> <!-- (518, (542, 564)) -->
+            <circle r="2" cy="0" cx="594" />
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-11" fill="#cccccc" transform="translate(0 -191)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="84" />
+            <circle r="2" cy="0" cx="128" /> <!-- (125, (131, 134)) -->
+            <circle r="2" cy="0" cx="371" /> <!-- (336, ((365, 365), (391, 398))) -->
+            <circle r="2" cy="0" cx="554" fill="red"/> <!-- (594, (518, (542, 564))) -->
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-12" fill="#cccccc" transform="translate(0 -231)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="118" /> <!-- (84, (125, (131, 134))) -->
+            <circle r="2" cy="0" cx="371" /> <!-- (336, ((365, 365), (391, 398))) -->
+            <circle r="2" cy="0" cx="554" fill="red"/> <!-- (594, (518, (542, 564))) -->
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="791" />
+            <circle r="2" cy="0" cx="835" />
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-13" fill="#cccccc" transform="translate(0 -275)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="24" />
+            <circle r="2" cy="0" cx="118" /> <!-- (84, (125, (131, 134))) -->
+            <circle r="2" cy="0" cx="371" /> <!-- (336, ((365, 365), (391, 398))) -->
+            <circle r="2" cy="0" cx="554" /> <!-- (594, (518, (542, 564))) -->
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="813" fill="red"/> <!-- (791, 835) -->
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-13" fill="#cccccc" transform="translate(0 -335)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="99" fill="red"/> <!-- (24, (84, (125, (131, 134)))) -->
+            <circle r="2" cy="0" cx="371" /> <!-- (336, ((365, 365), (391, 398))) -->
+            <circle r="2" cy="0" cx="554" /> <!-- (594, (518, (542, 564))) -->
+            <circle r="2" cy="0" cx="676" />
+            <circle r="2" cy="0" cx="813" /> <!-- (791, 835) -->
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-14" fill="#cccccc" transform="translate(0 -417)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="99" /> <!-- (24, (84, (125, (131, 134)))) -->
+            <circle r="2" cy="0" cx="371" /> <!-- (336, ((365, 365), (391, 398))) -->
+            <circle r="2" cy="0" cx="578" fill="red"/> <!-- (676, (594, (518, (542, 564)))) -->
+            <circle r="2" cy="0" cx="813" /> <!-- (791, 835) -->
+            <circle r="2" cy="0" cx="951" /> <!-- (940, (956, 971)) -->
+        </g>
+
+        <g id="step-15" fill="#cccccc" transform="translate(0 -522)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="99" /> <!-- (24, (84, (125, (131, 134)))) -->
+            <circle r="2" cy="0" cx="371" /> <!-- (336, ((365, 365), (391, 398))) -->
+            <circle r="2" cy="0" cx="578" /> <!-- (676, (594, (518, (542, 564)))) -->
+            <circle r="2" cy="0" cx="898" fill="red"/> <!-- ((940, (956, 971)), (791, 835)) -->
+        </g>
+
+        <g id="step-16" fill="#cccccc" transform="translate(0 -637)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="99" /> <!-- (24, (84, (125, (131, 134)))) -->
+            <circle r="2" cy="0" cx="371" /> <!-- (336, ((365, 365), (391, 398))) -->
+            <circle r="2" cy="0" cx="738" fill="red"/> <!-- ((676, (594, (518, (542, 564)))), ((940, (956, 971)), (791, 835))) -->
+        </g>
+
+        <g id="step-17" fill="#cccccc" transform="translate(0 -757)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="99" /> <!-- (24, (84, (125, (131, 134)))) -->
+            <circle r="2" cy="0" cx="616" fill="red"/> <!-- ((336, ((365, 365), (391, 398))), ((676, (594, (518, (542, 564)))), ((940, (956, 971)), (791, 835)))) -->
+        </g>
+
+        <g id="step-18" fill="#cccccc" transform="translate(0 -959)">
+            <line stroke="#000000" x1="-5" y1="0" x2="0" y2="0" />
+            <circle r="2" cy="0" cx="357" fill="red"/>
+        </g>
+
+    </g>
+
+</svg>
