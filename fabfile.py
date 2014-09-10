@@ -46,11 +46,11 @@ def reserve():
     serve()
 
 def preview():
-    local('git push')
     local('./env/bin/pelican -s publishconf.py')
 
 @hosts(production)
 def publish():
+    local('git push')
     local('./env/bin/pelican -s publishconf.py')
     project.rsync_project(
         remote_dir=dest_path,
