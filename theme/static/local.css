@@ -18,6 +18,14 @@
   background-size: 100%;
 }
 
+TT.docutils.literal {
+    background: hsla(0, 0%, 0%, 0.05);
+    padding: 0 0.4em;
+    border: 1px solid hsla(0, 0%, 0%, 0.1);
+    line-height: 1.4em;
+    border-radius: 2px;
+}
+
 .navbar .nav > li > a { color: #FF0F00; }
 .navbar .divider-vertical { border-right: 1px solid #4D4D4D; }
 .navbar { margin-bottom: 4em; background-color: rgba(0,0,0,0)} 
