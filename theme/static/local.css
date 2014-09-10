@@ -9,6 +9,13 @@
 .figure.align-left {
     float: left;
     margin-right: 1em;
+
+TT.docutils.literal {
+    background: hsla(0, 0%, 0%, 0.05);
+    padding: 0 0.4em;
+    border: 1px solid hsla(0, 0%, 0%, 0.1);
+    line-height: 1.4em;
+    border-radius: 2px;
 }
 
 .blog-header {
