@@ -14,6 +14,10 @@ production = 'michel.albert.lu'
 dest_path = '/var/www/albert.lu/michel/htdocs'
 
 
+def develop():
+    local('virtualenv env')
+    local('./env/bin/pip install pelican')
+
 def clean():
     if os.path.isdir(DEPLOY_PATH):
         local('rm -rf {deploy_path}'.format(**env))

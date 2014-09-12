@@ -1,5 +1,38 @@
 /* Styling for Nav bar. Bg color, link color etc */
 
+TABLE {
+    max-width: 100%;
+    display: block;
+    overflow: auto;
+    border: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+TABLE + TABLE{
+    margin-top: 1em;
+}
+
+TR:hover TH {
+    background: -moz-linear-gradient(top,  hsla(0,0%,0%,0.1) 0%, hsla(0,0%,0%,0.2) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,0%,0.1)), color-stop(100%,hsla(0,0%,0%,0.2))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  hsla(0,0%,0%,0.1) 0%,hsla(0,0%,0%,0.2) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  hsla(0,0%,0%,0.1) 0%,hsla(0,0%,0%,0.2) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  hsla(0,0%,0%,0.1) 0%,hsla(0,0%,0%,0.2) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  hsla(0,0%,0%,0.1) 0%,hsla(0,0%,0%,0.2) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#33000000',GradientType=0 ); /* IE6-9 */
+}
+
+TR:hover TD {
+    background: -moz-linear-gradient(top,  hsla(0,0%,0%,0.05) 0%, hsla(0,0%,0%,0.1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,0%,0.05)), color-stop(100%,hsla(0,0%,0%,0.1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  hsla(0,0%,0%,0.05) 0%,hsla(0,0%,0%,0.1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  hsla(0,0%,0%,0.05) 0%,hsla(0,0%,0%,0.1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  hsla(0,0%,0%,0.05) 0%,hsla(0,0%,0%,0.1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  hsla(0,0%,0%,0.05) 0%,hsla(0,0%,0%,0.1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d000000', endColorstr='#1a000000',GradientType=0 ); /* IE6-9 */
+}
+
 .figure {
     border: 1px solid #ccc;
     padding: 0.5em 1em;
@@ -71,10 +104,6 @@ h3 { font-family: 'Alegreya SC', 'Garamond', 'Georgia'; font-weight: normal}
 h2 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal;}
 h1 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal;}
 h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
-TABLE + TABLE{
-    margin-top: 1em;
-}
-
 .note {
     background: #ffe;
 }
@@ -96,16 +125,6 @@ TABLE + TABLE{
 TH, TD {
     padding: 0.3em 0.6em;
     border: 1px solid #c0c0c0;
-}
-
-TABLE {
-    border-collapse: collapse;
-    margin: 0 auto;
-    border: 2px solid #bb9;
-    border-radius: 5px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
 }
 
 .nav-list {
