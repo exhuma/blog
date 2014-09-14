@@ -1,6 +1,11 @@
 Better Testdata for HClustering
 ===============================
 
+:date: 2014-09-12 22:00
+:modified: 2014-09-14 12:01:54
+:tags: algorithms, github, python
+:category: programming
+
 While I first intended to create the matrices manually, it
 turned out to take too much time if I wanted to reproduce the exact same error
 as happened in the unit-tests.
