@@ -5,11 +5,12 @@ Automatically Sync Files on WIFI Connect
 :tags: linux, lifheack
 :category: automation
 
-I recently discovered wicd_. It is a really nifty network manager. And it
-supports running scripts on each connection stage for a network. This
-immediately gave me an idea:
+I recently discovered wicd_ (thanks to Gefoo_). It is a really nifty network
+manager. And it supports running scripts on each connection stage for a
+network. This immediately gave me an idea:
 
 .. _wicd: http://wicd.sourceforge.net/
+.. _Gefoo: https://gefoo.org/
 
 I like taking photos, and sometimes I unload them from my camera to my laptop
 for immediate housekeeping. I keep them on an in-house NAS for safe-keeping.
