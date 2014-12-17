@@ -141,6 +141,7 @@ TH, TD {
     padding-left: 0.5em;
     margin-left: 0.5em;
     border-bottom: 1px solid #ccc;
+    background: #fff;
 }
 
 .topic-title {
