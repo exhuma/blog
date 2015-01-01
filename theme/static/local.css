@@ -37,11 +37,19 @@ TR:hover TD {
     border: 1px solid #ccc;
     padding: 0.5em 1em;
     box-shadow: 3px 3px 4px hsla(0, 0%, 0%, 0.5);
+    margin-bottom: 1em;
 }
 
 .figure.align-left {
     float: left;
     margin-right: 1em;
+}
+
+.figure P {
+    padding: 0.5em 0 0 0;
+    margin: 0;
+    font-style: italic;
+    color: #888;
 }
 
 .blog-header {
