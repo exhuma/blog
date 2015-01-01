@@ -227,3 +227,12 @@ TH, TD {
 }
 
 
+.ed-system {
+    color: #880;
+    font-style: italic;
+}
+
+.ed-term {
+    font-style: italic;
+}
+
