@@ -13,8 +13,9 @@ TIMEZONE = 'Europe/Luxembourg'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/categories/%s.atom.xml'
+TAG_FEED_ATOM = 'feeds/tags/%s.atom.xml'
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
