@@ -31,3 +31,14 @@ As the galaxy map only calculates routes so far, I will have to settle for an
 intermediate stop at system :ed-system:`Wilingura`.
 
 Everything's set. Let's go!
+
+
+Notes
+-----
+
+* Both the :ed-term:`Intermediate Discovery Scanner` and the :ed-term:`Advanced
+  Discovery Scanner` can be bought on *Reynolds Hub* in :ed-system:`LTT 4772
+  B2`.
+
+* I should go back to :ed-system:`Hydrae Sector CQ-Y B4 A`. Was unable to find
+  the third star.
