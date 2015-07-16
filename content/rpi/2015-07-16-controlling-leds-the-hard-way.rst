@@ -72,4 +72,18 @@ Now this is the amusing part. And too big to post here. The resulting code can
 be found in my GitHub repository_.
 
 
+Conclusion
+==========
+
+It works. And the code of the individual processes is fairly simple.
+
+But...
+
+* I have two processes wach having a connection to the ``pigpiod`` daemon. It
+  irks me. I'd prefer having only one connection. But it's good enough for now.
+* It's not possible to attach event-handlers. The handling is completely
+  hard-coded in the dispatcher process. Again, good enough for a
+  quick-and-dirty script.
+
+
 .. _repository: https://github.com/exhuma/electro-sandbox/tree/master/mpledcontrol
