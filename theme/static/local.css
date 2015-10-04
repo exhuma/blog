@@ -95,6 +95,55 @@ TT.docutils.literal {
     padding-bottom: 6px;
 }
 
+
+
+DIV.pages-row {
+    background-color: hsla(244, 36%, 17%, 0.40);
+    border-top: 1px solid hsl(244, 36%, 30%);
+    border-bottom: 1px solid hsl(244, 36%, 30%);
+    /*
+    height: 2em;
+    line-height: 2em;
+    */
+    padding: 0 10em;
+    font-weight: bold;
+}
+
+UL.pages-pills {
+    margin: 0;
+}
+
+.pages-pills > li > a {
+    border: 1px solid hsla(245, 68%, 77%, 0.1);
+}
+
+.pages-pills > li > a:hover {
+    background-color: hsla(245, 68%, 77%, 0.1);
+    border: 1px solid hsla(245, 68%, 77%, 0.3);
+}
+
+.pages-pills > .active > a,
+.pages-pills > .active > a:hover {
+    text-decoration: none;
+}
+
+.pages-pills > .active > a {
+    background-color: hsla(245, 68%, 77%, 0.2);
+}
+
+.pages-pills > li > a {
+    border-radius: 2px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.pages-pills > li {
+    display: table-cell;
+}
+
+
 #blog-nav{
     padding: 5px 0;
     font-size:16px;

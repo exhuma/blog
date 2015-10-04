@@ -44,11 +44,6 @@
 
       <div class="span3" id="blog-nav">
 	<ul class="nav nav-pills pull-right">
-	  {% if DISPLAY_PAGES_ON_MENU %}
-          {% for page in PAGES %}
-            <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-            {% endfor %}
-            {% endif %}
 	   {% for cat, null in categories %}
 	    <li {% if cat == category %} class="active" {% endif %}>
 	      <a href="{{ SITEURL }}/{{ cat.url }} ">{{ cat }}</a>
@@ -57,6 +52,19 @@
       </div>
     </div> <!-- End of fluid row-->
   </div>   <!-- End of Container-->
+  {% if DISPLAY_PAGES_ON_MENU %}
+    <div class="row-fluid pages-row">
+      <div class="container">
+        <div class="span12">
+          <ul class="nav pages-pills pull-left">
+            {% for page in PAGES %}
+              <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>   <!-- End of Container-->
+    </div> <!-- End of fluid row-->
+  {% endif %}
 </header>
     
 <div class="container">
