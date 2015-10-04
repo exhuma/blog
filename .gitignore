@@ -1,3 +1,5 @@
+*.pyc
+/cache
 /env
 /output
-/cache
+__pycache__
