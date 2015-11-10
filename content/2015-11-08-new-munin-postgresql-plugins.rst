@@ -2,6 +2,7 @@ Alternative PostgreSQL plugin for munin
 #######################################
 
 :date: 2015-11-08 10:22:49
+:modified: 2015-11-10 08:00:49
 :tags: munin, postgresql, python
 :category: sysadmin
 
@@ -14,8 +15,16 @@ some time. But recently I've come annoyed with the amount of graphs those
 plugins generate. I've decided to fix this in the existing plugins, but ran
 into a design dilemma. It prompted me to re-write the plugins. During this I
 discovered a couple of interesting facts about both PostgreSQL stats, and the
-existing graphs. This blog-post (which is likely the first in a series) will
-give some context to the ongoing development and put my thoughs "on paper".
+existing graphs. This blog-post (which is the first in a series) will give some
+context to the ongoing development and put my thoughs "on paper".
+
+
+Related Posts
+-------------
+
+Part 1 (this post) |---| `Part 2`_
+
+.. _Part 2: {filename}2015-11-09-new-munin-postgresql-plugins-02.rst
 
 
 Stipulations
@@ -145,3 +154,4 @@ plugins. As of today, I have working graphs for:
 The current source can be found `on github`_
 
 .. _on github: https://github.com/exhuma/munin-plugins/blob/postgres-multigraphs/pg_multigraph
+.. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
