@@ -2,6 +2,7 @@ Alternative PostgreSQL plugin for munin |---| Part 3
 ####################################################
 
 :date: 2015-11-11 08:08:21
+:modified: 2015-11-27 14:02:07
 :tags: munin, postgresql, python
 :category: sysadmin
 
@@ -12,7 +13,7 @@ Related Posts
 
 This post in part in a series:
 
-`Part 1`_ |---| `Part 2`_ |---| Part 3 (this post)
+`Part 1`_ |---| `Part 2`_ |---| Part 3 (this post) |---| `Part 4`_
 
 
 Comparison with the Official Plugins
@@ -136,6 +137,7 @@ table in PG also talks about "row access". So do the docs.
 .. |---| unicode:: U+2014  .. em dash, trimming surrounding whitespace
 .. _Part 1: {filename}2015-11-08-new-munin-postgresql-plugins.rst
 .. _Part 2: {filename}2015-11-09-new-munin-postgresql-plugins-02.rst
+.. _Part 4: {filename}2015-11-27-new-munin-postgresql-plugins-04.rst
 .. _pg_statio_user_tables: http://www.postgresql.org/docs/9.2/static/monitoring-stats.html#PG-STATIO-ALL-TABLES-VIEW
 .. _pg_statio_user_sequences: http://www.postgresql.org/docs/9.2/static/monitoring-stats.html#PG-STATIO-ALL-SEQUENCES-VIEW
 .. _pg_statio_user_indexes: http://www.postgresql.org/docs/9.2/static/monitoring-stats.html#PG-STATIO-ALL-INDEXES-VIEW

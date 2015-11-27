@@ -2,6 +2,7 @@ Alternative PostgreSQL plugin for munin |---| Part 2
 ####################################################
 
 :date: 2015-11-10 08:00:49
+:modified: 2015-11-27 14:01:34
 :tags: munin, postgresql, python
 :category: sysadmin
 
@@ -12,9 +13,11 @@ Related Posts
 
 This post in part in a series:
 
-`Part 1`_ |---| Part 2 (this post)
+`Part 1`_ |---| Part 2 (this post) |---| `Part 3`_ |---| `Part 4`_
 
 .. _Part 1: {filename}2015-11-08-new-munin-postgresql-plugins.rst
+.. _Part 3: {filename}2015-11-11-new-munin-postgresql-plugins-03.rst
+.. _Part 4: {filename}2015-11-27-new-munin-postgresql-plugins-04.rst
 
 
 First Alpha Releases
