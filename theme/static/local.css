@@ -161,17 +161,24 @@ h3 { font-family: 'Alegreya SC', 'Garamond', 'Georgia'; font-weight: normal}
 h2 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal;}
 h1 { font-family: 'Alegreya SC', 'Garamond', 'Georgia' ; font-weight: normal;}
 h1,h2,h3,h4,h5,h6 { color: #000001; margin-bottom: 0px}
+
 .note {
     background: #ffe;
 }
 
-.note > .admonition-title {
+.note > .admonition-title,
+.warning > .admonition-title {
     font-weight: bold;
 }
 
-.note {
+.note,
+.warning {
     border: 1px solid#ccc;
     padding: 0 1em;
+}
+
+.warning {
+    background: #fee;
 }
 
 .table th,

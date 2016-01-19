@@ -74,8 +74,6 @@
         <div class="span10">
         {% block content %}{% endblock %}
         </div>
-        
-        
     </div> {# End row #}
     </div> {# End content #}
 </div>
@@ -144,13 +142,19 @@
       </div> <!--end of fluid row-->
     </div> <!--end of blog-footer-->
     <hr />
-    <p align="center"><a href="{{ SITEURL }}">{{ SITENAME }}</a>
-      &copy; {{ AUTHOR }}
+    <div class="span12" align="center">
+      <a href="http://stackexchange.com/users/53720">
+        <img src="http://stackexchange.com/users/flair/53720.png" width="208" height="58" alt="profile for exhuma on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for exhuma on Stack Exchange, a network of free, community-driven Q&amp;A sites">
+      </a>
+    </div>
+    <br clear="both" />
+    <div class="span12" align="center"><a href="{{ SITEURL }}">{{ SITENAME }}</a>
+    &copy; {{ AUTHOR }}
     Powered by <a href="github.com/getpelican/pelican">Pelican</a> and
         <a href="https://twitter.github.com/bootstrap">Twitter Bootstrap</a>. 
         Icons by <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> and 
-        <a href="http://gregoryloucas.github.com/Font-Awesome-More">Font Awesome More</a></p>
-
+        <a href="http://gregoryloucas.github.com/Font-Awesome-More">Font Awesome More</a></div>
+    <br clear="both" />
   </div> <!--end of well -->
 </div> <!--end of container -->
 
