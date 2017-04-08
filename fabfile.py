@@ -11,7 +11,7 @@ DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
 production = 'michel.albert.lu'
-dest_path = '/var/www/albert.lu/michel/htdocs'
+dest_path = '/var/www/html'
 
 
 def develop():
