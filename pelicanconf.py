@@ -40,3 +40,7 @@ DEFAULT_PAGINATION = 3
 #RELATIVE_URLS = True
 
 GRAVATAR = "70888c4c7063a4f8be70a01125e7cb74"
+
+PLUGINS = [
+    'pelican_gist'
+]
