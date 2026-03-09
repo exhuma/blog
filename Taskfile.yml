@@ -1,0 +1,92 @@
+# https://taskfile.dev
+version: '3'
+
+vars:
+  OUTPUT_DIR: output
+  CONTENT_DIR: content
+  DEV_CONF: pelicanconf.py
+  PROD_CONF: publishconf.py
+  DEPLOY_HOST: michel.albert.lu
+  DEPLOY_PATH: /var/www/html
+  PORT: '8000'
+
+tasks:
+  default:
+    desc: List available tasks
+    cmds:
+      - task --list
+    silent: true
+
+  # ── Environment ────────────────────────────────────────────────────────────
+
+  install:
+    desc: Set up virtual environment and install dependencies
+    cmds:
+      - python3 -m venv .venv
+      - .venv/bin/pip install --upgrade pip
+      - .venv/bin/pip install -r requirements.txt
+    sources:
+      - requirements.txt
+    generates:
+      - .venv/bin/pelican
+
+  # ── Building ────────────────────────────────────────────────────────────────
+
+  build:
+    desc: Build the site using the development config
+    deps: [install]
+    cmds:
+      - .venv/bin/pelican {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.DEV_CONF}}
+
+  build:prod:
+    desc: Build the site using the production config (SITEURL, feeds, Disqus, etc.)
+    deps: [install]
+    cmds:
+      - .venv/bin/pelican {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.PROD_CONF}}
+
+  rebuild:
+    desc: Clean then build from scratch (dev config)
+    cmds:
+      - task: clean
+      - task: build
+
+  # ── Cleaning ────────────────────────────────────────────────────────────────
+
+  clean:
+    desc: Remove generated output directory
+    cmds:
+      - rm -rf {{.OUTPUT_DIR}}
+
+  # ── Local development ───────────────────────────────────────────────────────
+
+  serve:
+    desc: Build and serve the site locally on http://localhost:{{.PORT}}
+    deps: [build]
+    cmds:
+      - python3 -m http.server {{.PORT}} --directory {{.OUTPUT_DIR}}
+
+  watch:
+    desc: Watch for content changes and rebuild automatically (no server)
+    deps: [install]
+    cmds:
+      - .venv/bin/pelican --autoreload {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.DEV_CONF}}
+
+  dev:
+    desc: Watch + serve simultaneously (equivalent to the old develop_server.sh)
+    deps: [install]
+    cmds:
+      # Pelican 4.5+ supports --autoreload --listen for a combined dev server.
+      # If using an older Pelican, upgrade requirements.txt first.
+      - .venv/bin/pelican --autoreload --listen --port {{.PORT}} {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.DEV_CONF}}
+
+  # ── Publishing ──────────────────────────────────────────────────────────────
+
+  publish:
+    desc: Build for production and deploy via rsync to {{.DEPLOY_HOST}}:{{.DEPLOY_PATH}}
+    deps: [build:prod]
+    cmds:
+      - >
+        rsync -e "ssh" -Prvzc --delete
+        --exclude .DS_Store
+        {{.OUTPUT_DIR}}/
+        {{.DEPLOY_HOST}}:{{.DEPLOY_PATH}}
