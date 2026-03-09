@@ -1,0 +1,68 @@
+# https://taskfile.dev
+version: '3'
+
+vars:
+  OUTPUT_DIR: output
+  CONTENT_DIR: content
+  DEV_CONF: pelicanconf.py
+  PROD_CONF: publishconf.py
+  DEPLOY_HOST: michel.albert.lu
+  DEPLOY_PATH: /var/www/html
+  PORT: '8000'
+
+tasks:
+  default:
+    desc: List available tasks
+    cmds:
+      - task --list
+    silent: true
+
+  install:
+    desc: Set up a virtual environment and install dependencies
+    cmds:
+      - python3 -m venv .venv
+      - .venv/bin/pip install --upgrade pip
+      - .venv/bin/pip install -r requirements.txt
+    sources:
+      - requirements.txt
+    generates:
+      - .venv/bin/pelican
+
+  build:
+    desc: Build the site using the development config
+    deps: [install]
+    cmds:
+      - .venv/bin/pelican {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.DEV_CONF}}
+
+  build:prod:
+    desc: Build the site using the production config (sets SITEURL, feeds, etc.)
+    deps: [install]
+    cmds:
+      - .venv/bin/pelican {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.PROD_CONF}}
+
+  clean:
+    desc: Remove generated output
+    cmds:
+      - rm -rf {{.OUTPUT_DIR}}
+
+  serve:
+    desc: Serve the built site locally on port {{.PORT}}
+    deps: [build]
+    cmds:
+      - python3 -m http.server {{.PORT}} --directory {{.OUTPUT_DIR}}
+
+  watch:
+    desc: Rebuild automatically on content changes
+    deps: [install]
+    cmds:
+      - .venv/bin/pelican -r {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.DEV_CONF}}
+
+  publish:
+    desc: Build for production and deploy via rsync to {{.DEPLOY_HOST}}
+    deps: [build:prod]
+    cmds:
+      - >
+        rsync -e "ssh" -Prvzc --delete
+        {{.OUTPUT_DIR}}/
+        {{.DEPLOY_HOST}}:{{.DEPLOY_PATH}}
+        --exclude .DS_Store
