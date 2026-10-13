@@ -1,0 +1,114 @@
+/*
+ * Syntax highlighting built from the design-system tokens, so it follows
+ * the light and dark theme. Covers Pelican's ".highlight" blocks and
+ * docutils' "pre.code" blocks (short Pygments class names).
+ */
+
+:is(.highlight, pre.code) .c,
+:is(.highlight, pre.code) .ch,
+:is(.highlight, pre.code) .cm,
+:is(.highlight, pre.code) .cp,
+:is(.highlight, pre.code) .cpf,
+:is(.highlight, pre.code) .c1,
+:is(.highlight, pre.code) .cs,
+:is(.highlight, pre.code) .comment {
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+:is(.highlight, pre.code) .k,
+:is(.highlight, pre.code) .kc,
+:is(.highlight, pre.code) .kd,
+:is(.highlight, pre.code) .kn,
+:is(.highlight, pre.code) .kp,
+:is(.highlight, pre.code) .kr,
+:is(.highlight, pre.code) .ow,
+:is(.highlight, pre.code) .keyword {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+:is(.highlight, pre.code) .kt,
+:is(.highlight, pre.code) .nb,
+:is(.highlight, pre.code) .bp {
+  color: var(--accent);
+}
+
+:is(.highlight, pre.code) .s,
+:is(.highlight, pre.code) .sa,
+:is(.highlight, pre.code) .sb,
+:is(.highlight, pre.code) .sc,
+:is(.highlight, pre.code) .dl,
+:is(.highlight, pre.code) .sd,
+:is(.highlight, pre.code) .s1,
+:is(.highlight, pre.code) .s2,
+:is(.highlight, pre.code) .se,
+:is(.highlight, pre.code) .sh,
+:is(.highlight, pre.code) .si,
+:is(.highlight, pre.code) .sx,
+:is(.highlight, pre.code) .sr,
+:is(.highlight, pre.code) .ss,
+:is(.highlight, pre.code) .string {
+  color: var(--clay);
+}
+
+:is(.highlight, pre.code) .m,
+:is(.highlight, pre.code) .mb,
+:is(.highlight, pre.code) .mf,
+:is(.highlight, pre.code) .mh,
+:is(.highlight, pre.code) .mi,
+:is(.highlight, pre.code) .il,
+:is(.highlight, pre.code) .mo,
+:is(.highlight, pre.code) .number {
+  color: var(--warn);
+}
+
+:is(.highlight, pre.code) .nf,
+:is(.highlight, pre.code) .fm,
+:is(.highlight, pre.code) .nc,
+:is(.highlight, pre.code) .nn,
+:is(.highlight, pre.code) .nd,
+:is(.highlight, pre.code) .ne {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+:is(.highlight, pre.code) .nv,
+:is(.highlight, pre.code) .vc,
+:is(.highlight, pre.code) .vg,
+:is(.highlight, pre.code) .vi,
+:is(.highlight, pre.code) .vm,
+:is(.highlight, pre.code) .na,
+:is(.highlight, pre.code) .nt {
+  color: var(--good);
+}
+
+:is(.highlight, pre.code) .gd {
+  color: var(--critical);
+  background: var(--critical-subtle);
+}
+
+:is(.highlight, pre.code) .gi {
+  color: var(--good);
+  background: var(--good-subtle);
+}
+
+:is(.highlight, pre.code) .gh,
+:is(.highlight, pre.code) .gu {
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+
+:is(.highlight, pre.code) .gp {
+  color: var(--ink-muted);
+  user-select: none;
+}
+
+:is(.highlight, pre.code) .err {
+  color: var(--critical);
+}
+
+:is(.highlight, pre.code) .hll {
+  background: var(--accent-subtle);
+  display: block;
+}
