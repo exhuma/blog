@@ -40,7 +40,11 @@ Post body here.
 
 ## Deployment
 
-Deployed via rsync over SSH to an AWS EC2 instance (Apache, eu-central-1).
-GitHub Actions automates this on every push to `master` — see `.github/workflows/deploy.yml`.
+`task publish` builds with `publishconf.py` and rsyncs `output/` over SSH
+to an AWS EC2 instance (Apache, eu-central-1).
 
-Requires the `DEPLOY_SSH_KEY` repository secret to be set.
+A GitHub Actions workflow that runs this on every push to `master` is
+prepared in `docs/workflows-deploy.yml` but **not active yet**. To enable
+it, move it to `.github/workflows/deploy.yml` and set the `DEPLOY_SSH_KEY`
+repository secret. Until then, nothing is deployed automatically, and
+even once it is, only `master` is published.
