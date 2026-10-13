@@ -29,7 +29,6 @@ THEME = 'theme'
 
 # Social widget
 SOCIAL = (
-    ('google-plus', 'https://plus.google.com/+MichelAlbert'),
     ('github', 'https://github.com/exhuma'),
     ('flickr', 'https://www.flickr.com/photos/57306640@N08/'),
     ('lastfm', 'https://last.fm/user/exhuma'),

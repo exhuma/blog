@@ -1,14 +1,13 @@
-<p>{{ article.locale_date }} </p>
-
-<p style="text-align: left;">
-Filed under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-</p>
-<p style="text-align: left;">
-{% if article.tags %} 
-    Tags {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %}
+<div class="post-meta">
+  <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+  <span aria-hidden="true">&middot;</span>
+  <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+</div>
+{% if article.tags %}
+<ul class="tag-list" aria-label="Tags">
+  {% for tag in article.tags %}
+  <li><a class="ma-tag" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
 {% endif %}
-</p>
-<p>
 {% include "twitter.html" %}
-</p>
-
