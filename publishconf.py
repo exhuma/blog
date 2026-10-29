@@ -10,10 +10,12 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-# PELICAN_SITEURL overrides the URL, e.g. for a preview build under
-# https://exhuma.github.io/blog. An empty value counts as unset.
+# Pages link to each other with relative URLs, so one build works both
+# at https://michel.albert.lu and under https://exhuma.github.io/blog.
+# Feeds still need absolute URLs and take them from SITEURL, which
+# PELICAN_SITEURL overrides. An empty value counts as unset.
 SITEURL = os.environ.get('PELICAN_SITEURL') or 'https://michel.albert.lu'
-RELATIVE_URLS = False
+RELATIVE_URLS = True
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
