@@ -43,9 +43,11 @@ Every push to `master` deploys the site to GitHub Pages:
 `.github/workflows/pages.yml` builds with `publishconf.py` and
 publishes `output/`. Branches are never deployed.
 
-To build against another URL, for example a preview at
-<https://exhuma.github.io/blog>, set `PELICAN_SITEURL`. A manual run of
-the workflow takes the same value as its `siteurl` input:
+Pages link to each other with relative URLs, so the same build works at
+<https://michel.albert.lu> and under <https://exhuma.github.io/blog>.
+Only the feeds use absolute URLs, taken from `SITEURL`. To point them
+elsewhere, set `PELICAN_SITEURL`, or pass the `siteurl` input to a
+manual run of the workflow:
 
 ```sh
 gh workflow run pages.yml -f siteurl=https://exhuma.github.io/blog
