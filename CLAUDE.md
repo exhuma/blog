@@ -59,12 +59,11 @@ recompile.
 
 ### Where posts come from
 
-The blog is being revived to write about Michel's current work: the
-Vikunja task setup, Claude Code workflows (the `umbrella` meta-repo,
-Quartermaster kits) and Hermes. Material for a post usually lives in a
-Vikunja task, its comments and the linked pull requests. Draft from
-those, but leave the post on a branch for Michel to review. Never
-publish on his behalf.
+The blog is being revived to write about Michel's current work: Claude
+Code workflows (the `umbrella` meta-repo, Quartermaster kits) and
+Hermes. Michel provides the material for a post, usually with links to
+issues and pull requests. Draft from those, but leave the post on a
+branch for Michel to review. Never publish on his behalf.
 
 ## Theme
 
