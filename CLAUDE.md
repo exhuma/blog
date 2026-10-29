@@ -72,7 +72,9 @@ of truth: <https://claude.ai/artifact/USZfWqBJGsJhfdoiH7HXH2>.
 - Only use the CSS custom properties defined in
   `theme/static/css/main.css`. No raw colour values.
 - Dark is the default; light must keep working. Check both.
-- No icon sets, no illustrations, no CSS frameworks.
+- No icon sets, no illustrations, no CSS frameworks. The contour-line
+  backdrop is the one exception; never hand-edit
+  `theme/static/css/backdrop.css`.
 - Before calling a theme change done, run `task build` and look at the
   index, an article with code and a callout (for example
   `getting-flask-social-working`), and the archives, at desktop and

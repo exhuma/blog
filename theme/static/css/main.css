@@ -812,6 +812,62 @@ main.wrap {
   margin: 0;
 }
 
+/* ── Backdrop ────────────────────────────────────────────────────────── */
+
+/* On wide screens the page becomes a raised sheet (surface-200, hairline
+   sides) and the space beside it shows contour lines in `line`, with
+   accent lines in `clay`. The tiles (--pattern, --pattern-accent) come
+   from backdrop.css, which base.html loads at the same width. The lines
+   never sit behind text. */
+
+@media screen and (min-width: 880px) {
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat;
+    -webkit-mask-size: 1200px 1200px;
+    mask-size: 1200px 1200px;
+  }
+
+  body::before {
+    background: var(--line);
+    -webkit-mask-image: var(--pattern);
+    mask-image: var(--pattern);
+  }
+
+  body::after {
+    background: var(--clay);
+    opacity: 0.35;
+    -webkit-mask-image: var(--pattern-accent);
+    mask-image: var(--pattern-accent);
+  }
+
+  .sheet {
+    max-width: calc(var(--measure) + 2 * var(--space-5));
+    min-height: 100vh;
+    margin: 0 auto;
+    background: var(--surface-200);
+    box-shadow: -1px 0 0 var(--line), 1px 0 0 var(--line);
+  }
+
+  .sheet .wrap {
+    max-width: none;
+    padding-inline: calc(var(--space-4) + var(--space-5));
+  }
+}
+
+@media print {
+  body::before,
+  body::after {
+    display: none;
+  }
+}
+
 /* ── Small screens and motion ────────────────────────────────────────── */
 
 @media (max-width: 600px) {
