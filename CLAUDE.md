@@ -37,8 +37,8 @@ recompile.
 - Metadata block under the title:
 
   ```rst
-  Post title in sentence case
-  ###########################
+  Post Title in Title Case
+  ########################
 
   :date: 2026-10-13 10:00:00
   :tags: python, tooling
@@ -52,8 +52,7 @@ recompile.
   (older posts use `{filename}`, which Pelican warns about).
 - Unfinished posts get `:status: draft`, or stay in `staging/`, which
   Pelican does not build.
-- Voice: short sentences, sentence case, no emoji, no exclamation marks.
-  Name things by what they are.
+- Write in Michel's voice. See "Voice" below.
 
 ### Where posts come from
 
@@ -62,6 +61,71 @@ Code workflows (the `umbrella` meta-repo, Quartermaster kits) and
 Hermes. Michel provides the material for a post, usually with links to
 issues and pull requests. Draft from those, but leave the post on a
 branch for Michel to review. Never publish on his behalf.
+
+## Voice
+
+Posts are written as Michel. The reference is his own posts from 2009
+to 2017, for example `2014-10-06-automove-files-on-wifi-connect.rst`,
+`2015-02-23-maximising-in-x11.rst` and `2016-03-04-flask-social.rst`.
+`2026-03-09-nine-years-retrospective.rst` was co-written by an AI and
+shows what to avoid. Do not use it as a model.
+
+### Tone
+
+- First person, conversational, like explaining something to a
+  colleague over coffee. Not a press release, not a pitch.
+- Start from a concrete situation: what annoyed him, what he needed,
+  what he tried. "For ages, I was annoyed that ...", "A couple of weeks
+  ago I decided to ...", "I've been using X for quite some time. But
+  recently ...".
+- Be honest about effort and dead ends. Say what did not work and what
+  is only a guess: "However, this did not work for me.", "I assume that
+  ...", "I should have known better."
+- Dry, self-deprecating humour in small doses: "because I'm lazy",
+  "So yay...", "that's where the fun started".
+- Enthusiasm is fine when it is plain: "nifty", "really handy",
+  "impressed so far". At most one exclamation mark per post.
+- Credit people and tools by name, with a link.
+
+### Structure
+
+- Get to the point in the first paragraph. Short posts are fine; 150
+  words can be a whole post.
+- Practical posts follow the problem: what happened, why, and what
+  fixed it. Headings like "The Problem", "Solution" and "End-Result"
+  are fine. Long posts may open with an `Abstract` topic.
+- Show the real thing: commands, config, code, numbers, and links to
+  the commits or pull requests.
+- Caveats go into a `.. note::`, including what he would still improve.
+- Stop when the content is done. No conclusion, no recap, no moral.
+  "And that's it!" is as much ending as a post needs.
+- Collect links as reStructuredText reference targets at the bottom.
+
+### Vocabulary and mechanics
+
+- Plain technical English. Prefer the simple word. British spellings
+  where they come naturally (colour, maximise, visualise).
+- Titles and section headings in Title Case, like his existing posts.
+- `*emphasis*` for the one word that matters, ``literals`` for names,
+  commands and files. Bold rarely.
+- Contractions are fine: "I've", "it's", "don't".
+
+### Never
+
+These read as machine-written. Michel noticed them in a draft.
+
+- Aphorism openers and slogans: "The blog went quiet in 2017. The
+  keyboard didn't.", headings like "Finished means correct".
+- Em dashes as a rhythm device. Use a full stop or a comma.
+- Parallel headings or sentences repeated for effect, and lists of
+  three for rhythm.
+- "Not X, but Y" contrasts, "The point is", "Here's what happened",
+  "quietly", "journey", "landscape", "robust", "seamless", "leverage".
+- Summary or call-to-action endings.
+- Claims nobody measured. Say what was done and measured; mark
+  opinions with "I think".
+- Invented motives. If the reason for something is unknown, leave a
+  `.. TODO` comment for Michel instead of guessing.
 
 ## Theme
 
