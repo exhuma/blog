@@ -21,7 +21,6 @@ task install
 | `task build` | One-off build (dev config) |
 | `task build:prod` | Build with production settings |
 | `task rebuild` | Clean then build from scratch |
-| `task publish` | Legacy: build prod + rsync to the old server |
 
 ## Writing a post
 
