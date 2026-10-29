@@ -16,7 +16,7 @@ Makefile, fabfile or shell scripts next to it.
 | Run       | `task dev`        | Autoreload + server on :8000.            |
 | Build     | `task build`      | Dev config, output in `output/`.         |
 | Prod build| `task build:prod` | Uses `publishconf.py`. Safe, no deploy.  |
-| Publish   | `task publish`    | **Deploys.** Never run unless asked.     |
+| Publish   | `task publish`    | Legacy rsync to the old server. Unused.  |
 
 Dependencies are pinned in `requirements.txt`, compiled from
 `requirements.in` with `pip-compile`. Edit the `.in` file, then
@@ -26,12 +26,11 @@ recompile.
 
 - `master` is what is live. Work on a feature branch and open a pull
   request. Never push to `master` directly.
-- Deploying is `task publish` (rsync over SSH). A GitHub Actions
-  workflow for it is prepared in `docs/workflows-deploy.yml` but is not
-  active. Once moved to `.github/workflows/`, it deploys on every push to
-  `master`. Branches are never deployed.
-- Do not activate that workflow, change deploy targets or touch secrets
-  unless Michel asks.
+- Every push to `master` deploys: `.github/workflows/pages.yml` builds
+  with `publishconf.py` and publishes to GitHub Pages. Merging a pull
+  request is publishing. Branches are never deployed.
+- Do not change the workflow, the Pages settings (custom domain
+  included) or secrets unless Michel asks.
 
 ## Writing posts
 
