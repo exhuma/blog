@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Michel Albert'
 SITENAME = u'Michel Albert'
-SITEURL = 'http://displacer:8000'
+# Empty for local development; publishconf.py sets the real URL.
+SITEURL = ''
 
 PATH = 'content'
 
@@ -28,7 +29,6 @@ THEME = 'theme'
 
 # Social widget
 SOCIAL = (
-    ('google-plus', 'https://plus.google.com/+MichelAlbert'),
     ('github', 'https://github.com/exhuma'),
     ('flickr', 'https://www.flickr.com/photos/57306640@N08/'),
     ('lastfm', 'https://last.fm/user/exhuma'),
@@ -36,8 +36,8 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 3
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# Document-relative URLs, so `task dev` works on any host and port.
+RELATIVE_URLS = True
 
 GRAVATAR = "70888c4c7063a4f8be70a01125e7cb74"
 

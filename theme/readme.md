@@ -1,25 +1,26 @@
-# Built Texts
+# Blog theme
 
-A simple theme with text as focus for pelican using Google Web Fonts
-(Gudea and Alegreya SC) the awesome Font awesome project and Twitter
-Bootstrap. It is responsive as supported by Twitter Bootstrap, and 
-hopefully doesn't give an eyesore on mobile devices.
-It is built atop of existing pelican theme tuxlite-tbs and actually 
-built-texts itself is an anagram for tuxlite-tbs. See it 
-in action at [my blog][1]
+Pelican theme for michel.albert.lu. It applies the Michel Albert design
+system: <https://claude.ai/artifact/USZfWqBJGsJhfdoiH7HXH2>.
 
-## Configuration Variables
+Originally based on "Built Texts" (see `LICENSE.txt`); rewritten in 2026
+without Bootstrap, jQuery or Font Awesome.
 
-Social icons are using the Font-Awesome more project, which at the
-moment supports a lot of social icons like flickr, blogger, lastfm,
-soundcloud etc.
+## Layout
 
-Also these theme supports an optional footer content under the
-variable name `COLOPHON` (if set to true). `COLOPHON_TITLE` and
-`COLOPHON_CONTENT` will help in setting a footer content. A 
-preview is shown below
+- `templates/` — Jinja2 templates. `base.html` holds the header, footer,
+  fonts and the light/dark toggle.
+- `static/css/main.css` — design tokens, components (`ma-*`) and prose
+  styles for rendered reStructuredText.
+- `static/css/pygments.css` — syntax highlighting built from the tokens.
 
-![preview](https://raw.github.com/theanalyst/built-texts/new-features/screenshot.png)
+## Rules
 
-
-[1]: http://theanalyst.github.com
+- Use the CSS custom properties from `main.css`. Do not add raw colour
+  values to templates or new CSS.
+- Dark is the default theme. Light follows `prefers-color-scheme`, or the
+  toggle, which sets `data-theme` on `<html>`.
+- No icon sets and no illustrations. Images get a 1px hairline and the
+  4px radius.
+- Fonts: Source Sans 3 for text, Source Code Pro for code. Headings use
+  weight 600.

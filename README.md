@@ -21,7 +21,7 @@ task install
 | `task build` | One-off build (dev config) |
 | `task build:prod` | Build with production settings |
 | `task rebuild` | Clean then build from scratch |
-| `task publish` | Build prod + rsync to server |
+| `task publish` | Legacy: build prod + rsync to the old server |
 
 ## Writing a post
 
@@ -40,7 +40,14 @@ Post body here.
 
 ## Deployment
 
-Deployed via rsync over SSH to an AWS EC2 instance (Apache, eu-central-1).
-GitHub Actions automates this on every push to `master` — see `.github/workflows/deploy.yml`.
+Every push to `master` deploys the site to GitHub Pages:
+`.github/workflows/pages.yml` builds with `publishconf.py` and
+publishes `output/`. Branches are never deployed.
 
-Requires the `DEPLOY_SSH_KEY` repository secret to be set.
+To build against another URL, for example a preview at
+<https://exhuma.github.io/blog>, set `PELICAN_SITEURL`. A manual run of
+the workflow takes the same value as its `siteurl` input:
+
+```sh
+gh workflow run pages.yml -f siteurl=https://exhuma.github.io/blog
+```
