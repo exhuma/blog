@@ -12,9 +12,6 @@
   <div class="prose">
     {{ article.content }}
   </div>
-  {% if DISQUS_SITENAME %}
-  <p class="post-footer"><a class="ma-button ma-button--secondary" href="{{ SITEURL }}/{{ article.url }}#comments-title">Comments</a></p>
-  {% endif %}
   {% else %}
   <div class="prose summary">
     {{ article.summary }}

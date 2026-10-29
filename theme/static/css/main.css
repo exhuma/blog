@@ -359,17 +359,6 @@ main.wrap {
   margin-top: var(--space-5);
 }
 
-.comments {
-  margin-top: var(--space-7);
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--line);
-}
-
-.comments h2 {
-  font: 600 19px/26px var(--font-sans);
-  margin: 0 0 var(--space-4);
-}
-
 .pagination {
   display: flex;
   justify-content: space-between;

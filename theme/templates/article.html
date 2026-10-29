@@ -10,10 +10,4 @@
     {{ article.content }}
   </div>
 </article>
-{% if DISQUS_SITENAME %}
-<section class="comments" aria-labelledby="comments-title">
-  <h2 id="comments-title">Comments</h2>
-  {% include "disqus.html" %}
-</section>
-{% endif %}
 {% endblock %}

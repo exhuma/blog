@@ -37,7 +37,7 @@ tasks:
       - .venv/bin/pelican {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.DEV_CONF}}
 
   build:prod:
-    desc: Build the site using the production config (SITEURL, feeds, Disqus, etc.)
+    desc: Build the site using the production config (SITEURL, feeds, etc.)
     deps: [install]
     cmds:
       - .venv/bin/pelican {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.PROD_CONF}}
