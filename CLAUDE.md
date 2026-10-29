@@ -86,6 +86,13 @@ shows what to avoid. Do not use it as a model.
 - Enthusiasm is fine when it is plain: "nifty", "really handy",
   "impressed so far". At most one exclamation mark per post.
 - Credit people and tools by name, with a link.
+- Keep his internal thinking out. A post says what changed and what
+  the reader needs to know: what a release does, what breaks, what to
+  use instead. It does not explain his reasoning, preferences or
+  workflow (why he picked a setting, what he finds annoying, what is
+  on his to-do list), unless that is the topic of the post. One short
+  reason is enough where a reader needs it, for example why a project
+  is retired.
 
 ### Structure
 
