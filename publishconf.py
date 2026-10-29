@@ -10,7 +10,9 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://michel.albert.lu'
+# PELICAN_SITEURL overrides the URL, e.g. for a preview build under
+# https://exhuma.github.io/blog. An empty value counts as unset.
+SITEURL = os.environ.get('PELICAN_SITEURL') or 'https://michel.albert.lu'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
