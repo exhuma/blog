@@ -6,8 +6,6 @@ vars:
   CONTENT_DIR: content
   DEV_CONF: pelicanconf.py
   PROD_CONF: publishconf.py
-  DEPLOY_HOST: michel.albert.lu
-  DEPLOY_PATH: /var/www/html
   PORT: '8000'
 
 tasks:
@@ -78,15 +76,3 @@ tasks:
       # Pelican 4.5+ supports --autoreload --listen for a combined dev server.
       # If using an older Pelican, upgrade requirements.txt first.
       - .venv/bin/pelican --autoreload --listen --port {{.PORT}} {{.CONTENT_DIR}} -o {{.OUTPUT_DIR}} -s {{.DEV_CONF}}
-
-  # ── Publishing ──────────────────────────────────────────────────────────────
-
-  publish:
-    desc: Build for production and deploy via rsync to {{.DEPLOY_HOST}}:{{.DEPLOY_PATH}}
-    deps: [build:prod]
-    cmds:
-      - >
-        rsync -e "ssh" -Prvzc --delete
-        --exclude .DS_Store
-        {{.OUTPUT_DIR}}/
-        {{.DEPLOY_HOST}}:{{.DEPLOY_PATH}}

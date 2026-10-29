@@ -15,8 +15,7 @@ Makefile, fabfile or shell scripts next to it.
 | Bootstrap | `task install`    | Creates `.venv`, installs requirements.  |
 | Run       | `task dev`        | Autoreload + server on :8000.            |
 | Build     | `task build`      | Dev config, output in `output/`.         |
-| Prod build| `task build:prod` | Uses `publishconf.py`. Safe, no deploy.  |
-| Publish   | `task publish`    | Legacy rsync to the old server. Unused.  |
+| Prod build| `task build:prod` | Uses `publishconf.py`. Never deploys.    |
 
 Dependencies are pinned in `requirements.txt`, compiled from
 `requirements.in` with `pip-compile`. Edit the `.in` file, then
