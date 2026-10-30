@@ -25,10 +25,11 @@ without Bootstrap, jQuery or Font Awesome.
 - No icon sets and no illustrations. Images get a 1px hairline and the
   4px radius.
 - The one decoration is the backdrop, shared with the library docs. From
-  880px up, the page is a raised sheet (`surface-200`, hairline sides).
-  Beside it are contour lines in `line`, with accent lines in `clay`. The
-  lines never sit behind text. The terrain comes from a hashed seed (the
+  880px up, the page is a raised sheet (`surface-200`, hairline sides, a
+  soft halo in `shadow`). Beside it are contour lines in `line`, with
+  accent lines in `clay`. They are crisp next to the sheet and fade toward
+  the screen edges. The lines never sit behind text. The terrain comes from a hashed seed (the
   site name). To change it, edit `SEED` in `generate_backdrop.py` and
   follow its docstring.
 - Fonts: Source Sans 3 for text, Source Code Pro for code. Headings use
-  weight 600.
+  weight 600. Post text is 18.5/30px; post titles are 34/42px.

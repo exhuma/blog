@@ -6,7 +6,7 @@ backdrop for the library docs. The seed is hashed into the terrain, so the
 same seed always gives the same tiles. Run this only when the seed or the
 package version changes::
 
-    pip install "michel-albert-sphinx @ git+https://github.com/exhuma/michel-albert-sphinx@v0.4.0"
+    pip install "michel-albert-sphinx @ git+https://github.com/exhuma/michel-albert-sphinx@v0.5.0"
     python theme/generate_backdrop.py
 """
 
