@@ -27,6 +27,7 @@
   --good-subtle: #232b1f;
   --warn-subtle: #2d2515;
   --critical-subtle: #33211c;
+  --shadow: rgba(0, 0, 0, 0.4);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -64,6 +65,7 @@
     --good-subtle: #e1ecd9;
     --warn-subtle: #f3e6c6;
     --critical-subtle: #f3dcd5;
+    --shadow: rgba(60, 40, 20, 0.14);
     color-scheme: light;
   }
 }
@@ -87,6 +89,7 @@
   --good-subtle: #e1ecd9;
   --warn-subtle: #f3e6c6;
   --critical-subtle: #f3dcd5;
+  --shadow: rgba(60, 40, 20, 0.14);
   color-scheme: light;
 }
 
@@ -176,7 +179,7 @@ hr {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3) var(--space-4);
-  padding-block: var(--space-4);
+  padding-block: 28px;
 }
 
 .mark {
@@ -321,20 +324,15 @@ main.wrap {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  margin-bottom: var(--space-5);
+  margin-bottom: 40px;
 }
 
+/* Also the lead post on the home page: about 1.84 times the prose size. */
 .post-title {
-  font: 600 32px/38px var(--font-sans);
-  letter-spacing: -0.25px;
+  font: 600 34px/42px var(--font-sans);
+  letter-spacing: -0.2px;
   margin: 0;
   text-wrap: balance;
-}
-
-.post--lead .post-title {
-  font-size: 44px;
-  line-height: 48px;
-  letter-spacing: -0.5px;
 }
 
 .post-title a {
@@ -411,6 +409,8 @@ main.wrap {
 
 .prose {
   overflow-wrap: break-word;
+  font-size: 18.5px;
+  line-height: 30px;
 }
 
 .prose > * {
@@ -433,6 +433,10 @@ main.wrap {
   margin-bottom: var(--space-4);
 }
 
+.prose p {
+  margin-bottom: 22px;
+}
+
 .prose h1,
 .prose h2,
 .prose h3,
@@ -450,6 +454,10 @@ main.wrap {
   line-height: 30px;
 }
 
+.prose h2 {
+  margin-top: 48px;
+}
+
 .prose h3 {
   font-size: 19px;
   line-height: 26px;
@@ -458,8 +466,8 @@ main.wrap {
 .prose h4,
 .prose h5,
 .prose h6 {
-  font-size: 16px;
-  line-height: 25px;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .prose h1 a,
@@ -735,7 +743,7 @@ main.wrap {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
-  font: 400 14px/21px var(--font-sans);
+  font: 400 15px/23px var(--font-sans);
 }
 
 .prose .topic-title {
@@ -804,12 +812,18 @@ main.wrap {
 /* ── Backdrop ────────────────────────────────────────────────────────── */
 
 /* On wide screens the page becomes a raised sheet (surface-200, hairline
-   sides) and the space beside it shows contour lines in `line`, with
-   accent lines in `clay`. The tiles (--pattern, --pattern-accent) come
-   from backdrop.css, which base.html loads at the same width. The lines
-   never sit behind text. */
+   sides, a soft halo in `shadow`) and the space beside it shows contour
+   lines in `line`, with accent lines in `clay`. The lines are crisp next
+   to the sheet and fade toward the screen edges: each layer intersects
+   its tile with --fade. The tiles (--pattern, --pattern-accent) come from
+   backdrop.css, which base.html loads at the same width. The lines never
+   sit behind text. */
 
 @media screen and (min-width: 880px) {
+  body {
+    --fade: radial-gradient(ellipse 70% 120% at 50% 50%, #000 35%, transparent 100%);
+  }
+
   body::before,
   body::after {
     content: "";
@@ -817,23 +831,25 @@ main.wrap {
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    -webkit-mask-repeat: repeat;
-    mask-repeat: repeat;
-    -webkit-mask-size: 1200px 1200px;
-    mask-size: 1200px 1200px;
+    -webkit-mask-repeat: repeat, no-repeat;
+    mask-repeat: repeat, no-repeat;
+    -webkit-mask-size: 1200px 1200px, 100% 100%;
+    mask-size: 1200px 1200px, 100% 100%;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
   }
 
   body::before {
     background: var(--line);
-    -webkit-mask-image: var(--pattern);
-    mask-image: var(--pattern);
+    -webkit-mask-image: var(--pattern), var(--fade);
+    mask-image: var(--pattern), var(--fade);
   }
 
   body::after {
     background: var(--clay);
     opacity: 0.35;
-    -webkit-mask-image: var(--pattern-accent);
-    mask-image: var(--pattern-accent);
+    -webkit-mask-image: var(--pattern-accent), var(--fade);
+    mask-image: var(--pattern-accent), var(--fade);
   }
 
   .sheet {
@@ -841,7 +857,7 @@ main.wrap {
     min-height: 100vh;
     margin: 0 auto;
     background: var(--surface-200);
-    box-shadow: -1px 0 0 var(--line), 1px 0 0 var(--line);
+    box-shadow: -1px 0 0 var(--line), 1px 0 0 var(--line), 0 0 40px 4px var(--shadow);
   }
 
   .sheet .wrap {
@@ -864,7 +880,6 @@ main.wrap {
     padding-block: var(--space-6) var(--space-7);
   }
 
-  .post--lead .post-title,
   .post-title,
   .page-title {
     font-size: 24px;
