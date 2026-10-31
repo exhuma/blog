@@ -5,3 +5,5 @@
 __pycache__
 /.venv
 /.task
+/shelf/
+/shelf.tar.gz

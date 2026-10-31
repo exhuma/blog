@@ -48,6 +48,27 @@ tasks:
       - task: clean
       - task: build
 
+  # ── Shelf (old slides, served under /shelf) ────────────────────────────────
+
+  shelf:pack:
+    desc: Pack the local shelf/ folder into shelf.tar.gz for the GitHub release
+    cmds:
+      # The excluded archives are exact copies of the unpacked deck folders.
+      - >-
+        python3 tools/pack_shelf.py shelf {{.SHELF_TARBALL}}
+        --exclude python-advanced-2018/python-advanced-2018.tar.gz
+        --exclude python-advanced-2019/python-advanced-2019.tar.gz
+        --exclude python-advanced-2023/python-advanced-2023.tar.gz
+        --exclude python-basic-2019/python-basic-2019.tar.gz
+        --exclude python-basic-2020/python-basic-2020.tar.gz
+        --exclude python-basic-2022/python-basic-2022.tar.gz
+        --exclude python-basic-2023/python-basic-2023.tar.gz
+        --exclude git-2018/git-2018.tar.gz
+        --exclude git-2022/git-2022.zip
+        --exclude http-talk-2020/http-talk-2020.tar.gz
+    vars:
+      SHELF_TARBALL: '{{.SHELF_TARBALL | default "shelf.tar.gz"}}'
+
   # ── Cleaning ────────────────────────────────────────────────────────────────
 
   clean:
