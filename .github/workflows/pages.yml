@@ -41,6 +41,16 @@ jobs:
           PELICAN_SITEURL: ${{ inputs.siteurl }}
         run: pelican content -o output -s publishconf.py --fatal errors
 
+      # The old slides live in the "shelf" release, not in git. See README.md.
+      - name: Add shelf
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download shelf --repo "$GITHUB_REPOSITORY" \
+            --pattern shelf.tar.gz --dir "$RUNNER_TEMP"
+          mkdir -p output/shelf
+          tar -xzf "$RUNNER_TEMP/shelf.tar.gz" -C output/shelf
+
       - name: Configure Pages
         uses: actions/configure-pages@v6
 

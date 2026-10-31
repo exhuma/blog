@@ -52,3 +52,24 @@ manual run of the workflow:
 ```sh
 gh workflow run pages.yml -f siteurl=https://exhuma.github.io/blog
 ```
+
+## Shelf
+
+Old slides are served under <https://michel.albert.lu/shelf/>, so links
+handed out at talks keep working. They are not in git. They live as
+`shelf.tar.gz` on the `shelf` release of this repository, and the deploy
+workflow unpacks it into `output/shelf`. If the download fails, the
+deploy fails.
+
+`task shelf:pack` builds the tarball from a local `shelf/` folder
+(ignored by git). It adds an Apache-style directory listing to every
+folder without its own `index.html`, like the old server did. To update
+the release:
+
+```sh
+task shelf:pack
+gh release upload shelf shelf.tar.gz --clobber
+```
+
+The release only takes effect on the next deploy. Push to `master`, or
+run the workflow by hand with `gh workflow run pages.yml`.
